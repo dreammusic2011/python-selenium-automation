@@ -27,13 +27,13 @@ sleep(1)
 
 driver.find_element(By.ID, "login")
 
-# # Verification
-# actual_result = driver.find_element(By.XPATH, "//div[@data-test='resultsHeading']").text
-# expected_result = 'tea'
-# assert expected_result in actual_result, f'Expected {expected_result} but got {actual_result}'
-#
-# print('test case passed')
-#
-# sleep(10)
-#
-# driver.quit()
+# Verification
+actual_result = driver.find_element(By.XPATH, ("//button[span[text()='Sign in with password']]")).text
+expected_result = 'Sign in with password'
+assert expected_result in actual_result, f'Expected {expected_result} but got {actual_result}'
+
+print('test case passed')
+
+sleep(10)
+
+driver.quit()
