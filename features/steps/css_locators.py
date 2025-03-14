@@ -17,7 +17,7 @@ driver.maximize_window()
 # open the url
 driver.get('https://www.amazon.com/')
 sleep(10)
-# find element
+#find element
 driver.find_element(By.CSS_SELECTOR, "#nav-link-accountList-nav-line-1").click()
 sleep(2)
 
@@ -37,11 +37,11 @@ driver.find_element(By.CSS_SELECTOR, "[href*='notification_privacy_notice']")
 driver.find_element(By.CSS_SELECTOR, ".a-link-emphasis")
 
 
-@given('Open target website')
+@given('Open target.com')
 def step_open_target(context):
     driver.get("https://www.target.com/")
 
-@when('Click the cart')
+@when('Click on Cart icon')
 def click_the_cart(context):
     driver.find_element(By.CSS_SELECTOR, "[href*='/cart?prehydrateClick=true']").click()
     sleep(2)
@@ -57,3 +57,25 @@ def verify_cart_is_empty(context):
 
 
 
+@given('Open target.com')
+def step_open_target(context):
+    driver.get("https://www.target.com/")
+
+@when('Click Sign In')
+def sign_in(context):
+    driver.find_element(By.ID, 'account-sign-in').click()
+    sleep(2)
+
+@when('Sign In from menu')
+def menu_sign_in(context):
+    driver.find_element(By.CSS_SELECTOR, "[data-test='accountNav-signIn']").click()
+    sleep(2)
+
+@then('Verify sign in page')
+def verify_sign_in_form(context):
+    actual_text = driver.find_element(By.CSS_SELECTOR, "[class*='styles_ndsHeading__HcGpD']").text
+
+    expected_text = 'Sign into your Target account'
+    assert expected_text in actual_text, f"Error. expected {expected_text} but got {actual_text}"
+
+    print("Test passed.")
