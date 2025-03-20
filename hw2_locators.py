@@ -5,31 +5,31 @@ from webdriver_manager.chrome import ChromeDriverManager
 from time import sleep
 
 # get the path to the ChromeDriver executable
-driver_path = ChromeDriverManager().install()
+# driver_path = ChromeDriverManager().install()
 
 # create a new Chrome browser instance
-service = Service(driver_path)
-driver = webdriver.Chrome(service=service)
-driver.maximize_window()
+# service = Service(driver_path)
+# driver = webdriver.Chrome(service=service)
+# driver.maximize_window()
 
 # open the url
-driver.get('https://www.amazon.com/')
-sleep(10)
+# driver.get('https://www.amazon.com/')
+# sleep(10)
 
 # find element
-driver.find_element(By.XPATH, "//div[@class='nav-line-1-container']").click()
+# driver.find_element(By.XPATH, "//div[@class='nav-line-1-container']").click()
 
-sleep(5)
+# sleep(5)
 
-driver.find_element(By.XPATH, "//i[@role='presentation']")
-driver.find_element(By.XPATH, "//input[@type='email']")
-driver.find_element(By.ID, 'continue')
-driver.find_element(By.XPATH, "//a[contains(text(), 'Conditions of Use')]")
-driver.find_element(By.XPATH, "//a[contains(text(), 'Privacy Notice')]")
-driver.find_element(By.XPATH, "//span[@class='a-expander-prompt']")
-driver.find_element(By.ID, "auth-fpp-link-bottom")
-driver.find_element(By.ID, "ap-other-signin-issues-link")
-driver.find_element(By.ID, "createAccountSubmit")
+# driver.find_element(By.XPATH, "//i[@role='presentation']")
+# driver.find_element(By.XPATH, "//input[@type='email']")
+# driver.find_element(By.ID, 'continue')
+# driver.find_element(By.XPATH, "//a[contains(text(), 'Conditions of Use')]")
+# driver.find_element(By.XPATH, "//a[contains(text(), 'Privacy Notice')]")
+# driver.find_element(By.XPATH, "//span[@class='a-expander-prompt']")
+# driver.find_element(By.ID, "auth-fpp-link-bottom")
+# driver.find_element(By.ID, "ap-other-signin-issues-link")
+# driver.find_element(By.ID, "createAccountSubmit")
 
 
 # open the url
