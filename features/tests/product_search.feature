@@ -15,5 +15,5 @@ Feature: Test Scenarios for links
     Examples:
     |search_word  |expected_text  |
     |tea          |tea            |
-    |chips        |chips          |
-    |soda         |soda           |
+    |lotion       |lotion         |
+    |cleaner      |cleaner        |
