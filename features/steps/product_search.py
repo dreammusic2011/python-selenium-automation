@@ -48,3 +48,4 @@ def verify_cart(context, expected_text):
     actual_text = context.driver.find_element(*PRODUCT_TITLE).text
 
     assert expected_text.lower() in actual_text.lower(), f'Error. Text {expected_text} not in {actual_text}'
+    #
