@@ -25,6 +25,7 @@ def verify_links(context, link_amount):
 
 
 
+
 @given('Open Target main page')
 def open_target_main_page(context):
     context.driver.get('https://www.target.com')
