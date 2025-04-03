@@ -1,5 +1,10 @@
 Feature: Test Scenarios for links
 
+ Scenario: User can search for a tea on Target
+    Given Open target page
+    When Search for tea
+    Then Verify correct search results shown for tea
+
 
   Scenario: Verify Target Circle Links
     Given Open Target Circle page
@@ -17,4 +22,3 @@ Feature: Test Scenarios for links
     |tea          |tea            |
     |lotion       |lotion         |
     |cleaner      |cleaner        |
-    #

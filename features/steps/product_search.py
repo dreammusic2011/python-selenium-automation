@@ -31,10 +31,13 @@ def open_target_main_page(context):
     context.driver.get('https://www.target.com')
 
 
-@when('search for {search_word}')
-def verify_links(context, search_word):
-    context.driver.find_element(*SEARCH_FIELD).send_keys(search_word)
-    context.driver.find_element(*SEARCH_BUTTON).click()
+# @when('search for {search_word}')
+# def verify_links(context, search_word):
+#     # context.driver.find_element(*SEARCH_FIELD).send_keys(search_word)
+#     # context.driver.find_element(*SEARCH_BUTTON).click()
+#     context.app.header.search(search_word)
+
+
 
 @when('Add to cart')
 def add_to_cart(context):
@@ -48,4 +51,3 @@ def verify_cart(context, expected_text):
     actual_text = context.driver.find_element(*PRODUCT_TITLE).text
 
     assert expected_text.lower() in actual_text.lower(), f'Error. Text {expected_text} not in {actual_text}'
-    #

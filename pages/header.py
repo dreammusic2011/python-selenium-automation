@@ -6,7 +6,7 @@ class Header(Page):
     SEARCH_FIELD = (By.ID, 'search')
     SEARCH_BUTTON = (By.CSS_SELECTOR, "[data-test='@web/Search/SearchButton'")
 
-    def search(self):
-        self.input_text('tea', *self.SEARCH_FIELD)
+    def search(self, search_word):
+        self.input_text(search_word, *self.SEARCH_FIELD)
         self.click(*self.SEARCH_BUTTON)
 
