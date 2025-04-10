@@ -10,6 +10,8 @@ from behave import given, when, then
 def sign_in(context):
     context.app.header.sign_in()
 
+
+
 @when('Click sign in nav')
 def sign_in_navigate(context):
     context.app.header.sign_in_navigate()
