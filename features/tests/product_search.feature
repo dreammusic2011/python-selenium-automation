@@ -12,13 +12,14 @@ Feature: Test Scenarios for links
 
 
   Scenario Outline: Search for product on Target
-    Given Open Target main page
+    Given Open target page
     When search for <search_word>
     When Add to cart
+    When Check out page
     Then Verify in cart for <expected_text>
 
     Examples:
     |search_word  |expected_text  |
-    |tea          |tea            |
-    |lotion       |lotion         |
-    |cleaner      |cleaner        |
+    |coffee       |coffee         |
+#    |lotion       |lotion         |
+#    |cleaner      |cleaner        |

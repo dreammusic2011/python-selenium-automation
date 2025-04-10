@@ -39,15 +39,16 @@ def open_target_main_page(context):
 
 
 
-@when('Add to cart')
-def add_to_cart(context):
-    sleep(9)
-    context.driver.find_element(*ADD_TO_CART).click()
-    context.driver.wait.until(EC.element_to_be_clickable(SIDE_PNL_ATC)).click()
-    context.driver.find_element(By.XPATH, "//a[text()='View cart & check out']").click()
+# @when('Add to cart')
+# def add_to_cart(context):
+#     sleep(9)
+#     context.driver.find_element(*ADD_TO_CART).click()
+#     context.driver.wait.until(EC.element_to_be_clickable(SIDE_PNL_ATC)).click()
+#     context.driver.find_element(By.XPATH, "//a[text()='View cart & check out']").click()
 
-@then('Verify in cart for {expected_text}')
-def verify_cart(context, expected_text):
-    actual_text = context.driver.find_element(*PRODUCT_TITLE).text
-
-    assert expected_text.lower() in actual_text.lower(), f'Error. Text {expected_text} not in {actual_text}'
+# @then('Verify in cart for {expected_text}')
+# def verify_cart(context, expected_text):
+    # actual_text = context.driver.find_element(*PRODUCT_TITLE).text
+    #
+    # assert expected_text.lower() in actual_text.lower(), f'Error. Text {expected_text} not in {actual_text}'
+    # context.app.cart_page.verify_cart(expected_text)
